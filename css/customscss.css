@@ -286,6 +286,7 @@ body #container .reservation-tabbers .go-back-tab:focus {
 }
 
 body #container .reservation-tabbers .hotel-and-date-tab #hotel-select {
+  cursor: pointer;
   font-size: 15px;
   font-weight: bold;
   width: 100%;
@@ -305,6 +306,7 @@ body #container .reservation-tabbers .hotel-and-date-tab #hotel-select {
 body #container .reservation-tabbers .hotel-and-date-tab #hotel-select option {
   font-size: 15px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 body #container .reservation-tabbers .hotel-and-date-tab #hotel-select .choose {
