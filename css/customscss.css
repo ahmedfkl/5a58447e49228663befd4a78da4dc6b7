@@ -496,7 +496,8 @@ body #container .reservation-tabbers .room-view-tab .choosen-hotel-date .choosen
 
 body #container .reservation-tabbers .room-view-tab .choosen-hotel-date .choosen-holder div::after {
   content: '';
-  height: 50px;
+  position: absolute;
+  height: 75px;
   width: 2px;
   background-color: #073763;
   float: right;
@@ -691,6 +692,15 @@ body #container .reservation-tabbers .room-view-tab .room-view-details .effect-p
   body #container .reservation-tabbers .room-view-tab .room-type .room-view-form .suite-holder {
     width: 100%;
     height: 200px;
+  }
+  body #container .reservation-tabbers .room-view-tab .room-view-details {
+    margin: 0;
+  }
+  body #container .reservation-tabbers .room-view-tab .room-view-details p {
+    font-size: 10px;
+  }
+  body #container .reservation-tabbers .room-view-tab .room-view-details .price {
+    font-size: 15px;
   }
 }
 
