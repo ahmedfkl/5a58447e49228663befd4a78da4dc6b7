@@ -21,6 +21,7 @@ $green:#37903f;
 
 body {
     font-family: 'Poppins', sans-serif;
+    /*****NAVIGATION*****/
     nav {
         display: flex;
         justify-content: space-between;
@@ -66,6 +67,8 @@ body {
     @include phone-bp {
         width: 100%;
     }
+    /*****NAVIGATION*****/
+    /*********EVERY SINGLE SYSTEM**********/
     #container {
         .tab-hider {
             display: none !important;
@@ -151,6 +154,7 @@ body {
                     }
                 }
             }
+            /*******CONTINUE AND GO BACK BUTTONS*********/
             .save-continue {
                 padding: 1em;
                 border: none;
@@ -215,6 +219,8 @@ body {
                     opacity: 0.8;
                 }
             }
+            /*******CONTINUE AND GO BACK BUTTONS*********/
+            /*******HOTEL, DATE, ADULT AND CHILD SELECTION*******/
             .hotel-and-date-tab {
                 #hotel-select {
                     font-size: 15px;
@@ -344,6 +350,8 @@ body {
                     }
                 }
             }
+            /*******HOTEL, DATE, ADULT AND CHILD SELECTION*******/
+            /*******ROOM AND VIEW SELECTION*******/
             .room-view-tab {
                 .room-view-type-little-header {
                     font-weight: bold;
@@ -521,6 +529,8 @@ body {
                     }
                 }
             }
+            /*******ROOM AND VIEW SELECTION*******/
+            /*******PAYMENT TAB*******/
             .payment-tab {
                 #payment-tab-go-back-btn,
                 #payment-tab-save-btn {
@@ -784,6 +794,8 @@ body {
                     }
                 }
             }
+            /*******PAYMENT TAB*******/
+            /*******BILL TAB*******/
             .reservation-finished-tab {
                 position: relative;
                 .delete-reserv-popup,
@@ -944,6 +956,7 @@ body {
                     }
                 }
             }
+            /*******BILL TAB*******/
         }
         @include phone-bp {
             .reservation-tabbers {

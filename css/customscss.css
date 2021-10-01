@@ -9,6 +9,9 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  /*****NAVIGATION*****/
+  /*****NAVIGATION*****/
+  /*********EVERY SINGLE SYSTEM**********/
 }
 
 body nav {
@@ -162,6 +165,16 @@ body #container .reserv-steps .unreached-step rect {
 
 body #container .reservation-tabbers {
   margin: 5em 20em;
+  /*******CONTINUE AND GO BACK BUTTONS*********/
+  /*******CONTINUE AND GO BACK BUTTONS*********/
+  /*******HOTEL, DATE, ADULT AND CHILD SELECTION*******/
+  /*******HOTEL, DATE, ADULT AND CHILD SELECTION*******/
+  /*******ROOM AND VIEW SELECTION*******/
+  /*******ROOM AND VIEW SELECTION*******/
+  /*******PAYMENT TAB*******/
+  /*******PAYMENT TAB*******/
+  /*******BILL TAB*******/
+  /*******BILL TAB*******/
 }
 
 body #container .reservation-tabbers .sum-price .sum-price-details {
