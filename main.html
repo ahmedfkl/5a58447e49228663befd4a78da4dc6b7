@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projectHotelNHotel</title>
+    <link rel="stylesheet" href="css/customscss.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="icon" href="images/logo.svg">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-left">
+            <img class="logo" src="images/logo.svg" alt="">
+            <div class="logo-texts">
+                <p class="hotel-name">HotelNHotel</p>
+                <p class="hotel-motto">Odanı Kaçırma</p>
+            </div>
+        </div>
+        <div class="nav-right">
+            <button id="nav-new-reserv" class="new-reservation">Yeni Rezervasyon Yap</button>
+        </div>
+    </nav>
+    <section id="container">
+        <div class="reserv-steps">
+            <div class="reserv-step-circle-1">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <g>
+	                    <g>
+		                    <path d="M452,40h-24V0h-40v40H124V0H84v40H60C26.916,40,0,66.916,0,100v352c0,33.084,26.916,60,60,60h392
+                                c33.084,0,60-26.916,60-60V100C512,66.916,485.084,40,452,40z M472,452c0,11.028-8.972,20-20,20H60c-11.028,0-20-8.972-20-20V188
+                                h432V452z M472,148H40v-48c0-11.028,8.972-20,20-20h24v40h40V80h264v40h40V80h24c11.028,0,20,8.972,20,20V148z"/>
+                    	    </g>
+                        </g>
+                    <g>
+                        <g>
+                            <rect x="76" y="230" width="40" height="40"/>
+                        </g>
+                    </g>
+                    <g>     
+                        <g>
+                            <rect x="156" y="230" width="40" height="40"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <rect x="236" y="230" width="40" height="40"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <rect x="316" y="230" width="40" height="40"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <rect x="396" y="230" width="40" height="40"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <rect x="76" y="310" width="40" height="40"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <rect x="156" y="310" width="40" height="40"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <rect x="236" y="310" width="40" height="40"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <rect x="316" y="310" width="40" height="40"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <rect x="76" y="390" width="40" height="40"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <rect x="156" y="390" width="40" height="40"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <rect x="236" y="390" width="40" height="40"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <rect x="316" y="390" width="40" height="40"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <rect x="396" y="310" width="40" height="40"/>
+                        </g>
+                    </g>
+                </svg>
+
+            </div>
+            <div class="reserv-step-circle-2 unreached-step">
+                <?xml version="1.0" encoding="iso-8859-1"?>
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                <g>
+                    <g>
+                        <polygon points="60,286 60,76 0,76 0,436 60,436 60,376 452,376 452,436 512,436 512,376 512,286 		"/>
+                    </g>
+                </g>
+                <g>
+                    <g>
+                        <path d="M135,166c-24.853,0-45,20.147-45,45v45h90v-45C180,186.147,159.853,166,135,166z"/>
+                    </g>
+                </g>
+                <g>
+                    <g>
+                        <path d="M467,166H255c-24.853,0-45,20.147-45,45v45h302v-45C512,186.147,491.853,166,467,166z"/>
+                    </g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                </svg>
+
+            </div>
+            <div class="reserv-step-circle-3 unreached-step">
+                <svg id="Capa_1" enable-background="new 0 0 512.002 512.002" height="512" viewBox="0 0 512.002 512.002" width="512" xmlns="http://www.w3.org/2000/svg"><g><path d="m502.903 96.829c-6.634-7.842-15.924-12.632-26.161-13.487l-360.557-30.106c-10.238-.855-20.192 2.328-28.035 8.961-7.811 6.607-12.594 15.85-13.476 26.037l-7.254 68.056h-28.965c-21.204 0-38.455 17.251-38.455 38.455v225.702c0 21.204 17.251 38.455 38.455 38.455h361.813c21.205 0 38.456-17.251 38.456-38.455v-36.613l12.839 1.072c1.083.09 2.16.135 3.228.135 19.768 0 36.62-15.209 38.294-35.257l18.781-224.919c.854-10.237-2.329-20.193-8.963-28.036zm-464.448 79.461h361.813c10.176 0 18.456 8.279 18.456 18.455v20.566h-398.724v-20.566c0-10.176 8.279-18.455 18.455-18.455zm-18.455 59.021h398.724v41.489h-398.724zm380.268 203.591h-361.813c-10.176 0-18.455-8.279-18.455-18.455v-123.647h398.724v123.647c0 10.176-8.28 18.455-18.456 18.455zm91.667-315.702-18.781 224.919c-.847 10.141-9.788 17.706-19.927 16.856l-14.503-1.211v-169.019c0-21.204-17.251-38.455-38.456-38.455h-312.734l7.039-66.04c.008-.076.015-.151.021-.228.847-10.141 9.783-17.705 19.927-16.855l360.558 30.106c4.913.41 9.372 2.709 12.555 6.473s4.711 8.541 4.301 13.454z"/><path d="m376.873 326.532h-96.242c-5.523 0-10 4.477-10 10v62.789c0 5.523 4.477 10 10 10h96.242c5.523 0 10-4.477 10-10v-62.789c0-5.523-4.477-10-10-10zm-10 62.789h-76.242v-42.789h76.242z"/></g></svg>
+            </div>
+        </div>
+        <div class="reservation-tabbers">
+            <div class="hotel-and-date-tab">
+                <select name="hotels" id="hotel-select">
+                    <option class="choose" value="0">Otel Seçiniz</option>
+                    <option value="1">Bosphorus Hotel</option>
+                    <option value="2">Big Istanbul Hotel</option>
+                    <option value="3">Dela Hotel</option>
+                    <option value="4">Aegean Hotel</option>
+                    <option value="5">Lara Hotel</option>
+                    <option value="6">Bodrum Hotel</option>
+                    <option value="7">Visnezade Istanbul Hotel</option>
+                    <option value="8">Konak Istanbul Hotel</option>
+                    <option value="9">Dardania Hotel</option>
+                    <option value="10">Alanya Hotel</option>
+                </select>
+                <div class="dates-persons">
+                    <div class="date-picker-holder">
+                        <label for="date-start-end">Giriş ve Çıkış Tarihi</label>
+                        <input type="text" name="daterange" id="datepicker" class="date-picker-range" />
+                    </div>
+                    <span class="vertical-line"></span>
+                    <div class="adult-number-holder">
+                        <label for="adult-count">Yetişkin Sayısı</label>
+                        <div class="adult-counter">
+                            <input value="1" name="adult-persons" class="adult-number">
+                            <div class="counter-buttons">
+                                <img src="images/minus.svg" class="adult-minus">
+                                <img src="images/plus.svg" class="adult-plus">
+                            </div>
+                        </div>
+                    </div>
+                    <span class="vertical-line"></span>
+                    <div class="child-number-holder">
+                        <label for="child-count">Çocuk Sayısı</label>
+                        <div class="child-counter">
+                            <input value="0" name="child-persons" class="child-number">
+                            <div class="counter-buttons">
+                                <img src="images/minus.svg" class="child-minus">
+                                <img src="images/plus.svg" class="child-plus">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="hotel-date-save-btn" class="save-continue">Kaydet ve Devam Et</button>
+            </div>
+            <div class="room-view-tab tab-hider">
+                <div class="choosen-hotel-date">
+                    <h2 class="choosen-hotel">Otel</h2>
+                    <div class="choosen-holder">
+                        <div class="enter-exit-date">
+                            <p class="choosen-little-header">Giriş ve Çıkış Tarihi</p>
+                            <p class="choosen-date">01/01/2021 - 02/01/2021</p>
+                        </div>
+                        <div class="adult-persons">
+                            <p class="choosen-little-header">Yetişkin</p>
+                            <p class="choosen-adult">1</p>
+                        </div>
+                        <div class="child-person">
+                            <p class="choosen-little-header">Çocuk</p>
+                            <p class="choosen-child">1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="room-type">
+                    <h1 class="room-view-type-header">Oda Tipi Seçimi</h1>
+                    <form class="room-view-form">
+                        <div class="standard-holder">
+                            <input class="room-view-radio" type="radio" id="standard-room" name="room-typer" value="Standard">
+                            <label class="room-standard-lbl standard-bg" for="standard-room">
+                                <div class="room-view-type-little-header">Standart</div>
+                                    <img src="images/1-standart.jpg"></img>
+                                    <div class="room-view-details">
+                                        <div class="forprice">
+                                            <p class="days">5 Gün</p>
+                                            <p class="person">1 Yetişkin</p>
+                                        </div>
+                                        <div class="price">5.635 TL</div>
+                                    </div>
+                            </label>
+                        </div>
+                        <div class="deluxe-holder">
+                            <input class="room-view-radio" type="radio" id="deluxe-room" name="room-typer" value="Deluxe">
+                            <label class="room-deluxe-lbl deluxe-bg" for="deluxe-room">                                
+                                <div class="room-view-type-little-header">Deluxe</div>
+                                <img src="images/1-deluxe.jpg"></img>
+                                <div class="room-view-details">
+                                    <div class="forprice">
+                                        <p class="days">5 Gün</p>
+                                        <p class="person">1 Yetişkin</p>
+                                    </div>
+                                    <div class="price">13.235 TL</div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="suite-holder">
+                            <input class="room-view-radio" type="radio" id="suite-room" name="room-typer" value="Suit">
+                            <label class="room-suite-lbl suite-bg" for="suite-room">
+                                <div class="room-view-type-little-header">Suit</div>
+                                <img src="images/1-suit.jpg"></img>
+                                <div class="room-view-details">
+                                    <div class="forprice">
+                                        <p class="days">5 Gün</p>
+                                        <p class="person">1 Yetişkin</p>
+                                    </div>
+                                    <div class="price">50.210 TL</div>
+                                </div>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="view-type">
+                    <h1 class="room-view-type-header">Manzara Seçimi</h1>
+                    <form class="room-view-form">
+                        <div class="land-holder">
+                            <input class="view-land-radio" type="radio" id="land-view" name="view-typer" value="Kara">
+                            <label class="view-land-lbl" for="land-view">
+                                <div class="room-view-type-little-header">Kara Manzaralı
+                                </div>
+                                    <img src="images/land-view.jpg"></img>
+                                    <div class="room-view-details">
+                                        <div class="forprice">
+                                            <p class="effect-to-price">Fiyata Etki Oranı</p>
+                                        </div>
+                                        <div class="effect-percent">+1%</div>
+                                    </div>
+                            </label>
+                        </div>
+                        <div class="pool-holder">
+                            <input class="room-view-radio" type="radio" id="pool-view" name="view-typer" value="Havuz">
+                            <label class="view-pool-lbl" for="pool-view">
+                                <div class="room-view-type-little-header">Havuz Manzaralı</div>
+                                <img src="images/pool-view.jpg"></img>
+                                <div class="room-view-details">
+                                    <div class="forprice">
+                                        <p class="effect-to-price">Fiyata Etki Oranı</p>
+                                    </div>
+                                    <div class="effect-percent">+15%</div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="sea-holder">
+                            <input class="room-view-radio" type="radio" id="sea-view" name="view-typer" value="Deniz">
+                            <label class="view-sea-lbl" for="sea-view">
+                                <div class="room-view-type-little-header">Deniz Manzaralı</div>
+                                <img src="images/sea-view.jpg"></img>
+                                <div class="room-view-details">
+                                    <div class="forprice">
+                                        <p class="effect-to-price">Fiyata Etki Oranı</p>
+                                    </div>
+                                    <div class="effect-percent">+38%</div>
+                                </div>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <button id="room-view-tab-go-back-btn" class="go-back-tab">Geri Git</button>
+                <button id="room-view-tab-save-btn" class="save-continue">Kaydet ve Devam Et</button>
+            </div>
+            <div class="payment-tab tab-hider">
+                <div class="payment-container">
+                    <div class="payment-left-wing">
+                        <div class="credit-card">
+                            <div class="card-first-floor">
+                                <h1 class="card-name">
+                                    <p>Credit</p>
+                                    <p>Card</p>
+                                </h1>
+                                <div class="bank-name">BANK</div>
+                            </div>
+                            <div class="card-second-floor">
+                                <div class="card-arrow"></div>
+                                <img src="images/chip.svg">
+                                <div class="cvv"></div>
+                            </div>
+                            <div class="card-third-floor">
+                                <p class="card-number"></p>
+                            </div>
+                            <div class="card-fourth-floor">
+                                <div class="card-bottom-left">
+                                    <div class="customer-name">XXXXXX XXXXXX</div>
+                                    <div class="card-last-date">
+                                        <p class="card-selected-month">06</p>/
+                                        <p class="card-selected-year">25</p>
+                                    </div>
+                                </div>
+                                <div class="card-bottom-right">
+                                    <img src="images/visa.svg">
+                                </div>
+                            </div>
+                        </div>
+                        <fieldset>
+                            <legend>Kart Bilgileri</legend>
+                            <div class="card-form-holder">
+                                <label for="card-name">Kartın Üzeinde İsim ve Soyisim</label>
+                                <input type="text" id="card-name">
+                                <label for="card-number">Kart Numarası</label>
+                                <input maxlength="16" type="text" id="card-number">
+                                <div class="card-date-cvv">
+                                    <div class="card-dater-holder">
+                                        <label for="card-month">Kart Son Kullanma Tarihi</label>
+                                        <div class="card-dater">
+                                            <select name="month" id="card-month">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                            </select>
+                                            <select name="year" id="card-year">
+                                                <option value="2021">2021</option>
+                                                <option value="2022">2022</option>
+                                                <option value="2023">2023</option>
+                                                <option value="2024">2024</option>
+                                                <option value="2025">2025</option>
+                                                <option value="2026">2026</option>
+                                                <option value="2027">2027</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="cvv-holder">
+                                        <label for="cvv">CVV</label>
+                                        <input maxlength="3" type="text" id="cvv">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="payment-right-wing">
+                        <div class="selected-hotel">Otel</div>
+                        <div class="selected-details">
+                            <p class="holiday-detail-title">Giriş ve Çıkış Tarihi: </p>
+                            <p class="selected-date"></p>
+                        </div>
+                        <div class="selected-details">
+                            <p class="holiday-detail-title">Yetişkin: </p>
+                            <p class="selected-adult"></p>
+                        </div>
+                        <div class="selected-details">
+                            <p class="holiday-detail-title">Çocuk: </p>
+                            <p class="selected-child"></p>
+                        </div>
+                        <div class="selected-details">
+                            <p class="holiday-detail-title">Oda Tipi: </p>
+                            <p class="selected-room-type"></p>
+                        </div>
+                        <div class="selected-details">
+                            <p class="holiday-detail-title">Manzara: </p>
+                            <p class="selected-view"></p>
+                        </div>
+                        <div class="cupon-code">
+                            <input type="text" name="cupon" placeholder="Kupon Kodu" id="cupon-code-input">
+                            <button class="cupon-btn">Kodu Kullan</button>
+                        </div>
+                        <div class="sum-price">
+                            <div class="sum-price-details" id="room-price">
+                                <div class="price-title-holder">
+                                    <p class="sum-price-title">Oda Fiyatı</p>
+                                </div>
+                                <div class="bill-detail">1.127 TL</div>
+                            </div>
+                            <div class="sum-price-details" id="price-effect-rate">
+                                <div class="price-title-holder">
+                                    <p class="sum-price-title">Fiyat Etki Oranı</p>
+                                </div>
+                                <div class="bill-detail">%38</div>
+                            </div>
+                            <div class="sum-price-details" id="layover">
+                                <div class="price-title-holder">
+                                    <p class="sum-price-title">Konaklama </p>
+                                    <p class="sum-price-under-title">(5 Gün)</p>
+                                </div>
+                                <div class="bill-detail">5.635 TL</div>
+                            </div>
+                            <div class="sum-price-details" id="cupon-off">
+                                <div class="price-title-holder">
+                                    <p class="sum-price-title">İndirim </p>
+                                    <p class="sum-price-under-title">(CODE100)</p>
+                                </div>
+                                <div class="bill-detail">-100 TL</div>
+                            </div>
+                            <div class="last-price">
+                                <h5>TOPLAM TUTAR</h5>
+                                <h1>7.676 TL</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="go-back-tab" id="payment-tab-go-back-btn">Geri Git</button>
+                <button class="save-continue" id="payment-tab-save-btn">Ödeme Yap ve Bitir</button>
+            </div>
+            <div class="reservation-finished-tab tab-hider">
+                <div class="delete-reserv-popup tab-hider">
+                    <p>Rezervasyon kaydınızı iptal etmek istediğinize eminmisiniz?</p>
+                    <div class="pop-btn">
+                        <button class="accept">Onaylıyorum</button>
+                        <button class="decline">İptal</button>
+                    </div>
+                </div>
+                <div id="confirm" class="deleted-confirm-message tab-hider">
+                    <img src="images/warning.svg">
+                    <p>Rezervasyonunuz iptal edilmiştir!</p>
+                    <div class="pop-btn">
+                        <button class="ok">Tamam</button>
+                    </div>
+                </div>
+                <img src="images/checked.svg">
+                <div class="final-message-wrapper">
+                    <h3 class="final-message-title">
+                        Rezarvasyon Kaydınız Alınmıştır
+                    </h3>
+                    <p class="final-message">Rezarvasyon özetiniz aşağıdaki gibidir. Rezervasyon kaydınızda değişiklik veya yeni rezervasyon yapmak için aşağıdaki linkeri kullanabilirsiniz.</p>
+                </div>
+                <div class="final-reserv-btn">
+                    <button class="new-reservation">Yeni Rezervasyon Yap</button>
+                    <button class="update-reservation">Rezervasyonu Güncelle</button>
+                    <button class="delete-reservation">Rezervasyonu Sil</button>
+                </div>
+                <div class="reservation-all-details">
+                    <h2 class="reserv-hotel">Otel</h2>
+                    <div class="reserv-detail-wrapper">
+                        <div class="reserv-hotel-detail">
+                            <p class="reserv-title">Giriş ve Cıkış Tarihi:</p>
+                            <p class="reserv-date">01/01/1881 - 10/11/1938</p>
+                        </div>
+                        <div class="reserv-hotel-detail">
+                            <p class="reserv-title">Yetişkin:</p>
+                            <p class="reserv-adult">1</p>
+                        </div>
+                        <div class="reserv-hotel-detail">
+                            <p class="reserv-title">Çocuk:</p>
+                            <p class="reserv-child">0</p>
+                        </div>
+                        <div class="reserv-hotel-detail">
+                            <p class="reserv-title">Oda Tipi:</p>
+                            <p class="reserv-room">Suit</p>
+                        </div>
+                        <div class="reserv-hotel-detail">
+                            <p class="reserv-title">Manzara:</p>
+                            <p class="reserv-view">Deniz</p>
+                        </div>
+                    </div>
+                    <div id="final-price" class="sum-price">
+                        <div class="sum-price-details">
+                            <div class="price-title-holder">
+                                <p class="sum-price-title">Oda Fiyatı</p>
+                            </div>
+                            <div class="bill-detail">1.127 TL</div>
+                        </div>
+                        <div class="sum-price-details">
+                            <div class="price-title-holder">
+                                <p class="sum-price-title">Fiyat Etki Oranı</p>
+                            </div>
+                            <div class="bill-detail">%38</div>
+                        </div>
+                        <div class="sum-price-details">
+                            <div class="price-title-holder">
+                                <p class="sum-price-title">Konaklama </p>
+                                <p class="sum-price-under-title">(5 Gün)</p>
+                            </div>
+                            <div class="bill-detail">5.635 TL</div>
+                        </div>
+                        <div class="sum-price-details">
+                            <div class="price-title-holder">
+                                <p class="sum-price-title">İndirim </p>
+                                <p class="sum-price-under-title">(CODE100)</p>
+                            </div>
+                            <div class="bill-detail">-100 TL</div>
+                        </div>
+                        <div class="last-price" id="final-price-line">
+                            <h5>TOPLAM TUTAR</h5>
+                            <h1>7.676 TL</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="javascript/customjs.js"></script>
+</body>
+
+</html>

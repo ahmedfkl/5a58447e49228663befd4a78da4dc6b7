@@ -1,0 +1,1245 @@
+@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+body nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1em 2em;
+  background-color: #073763;
+}
+
+body nav .nav-left {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body nav .nav-left .logo {
+  width: 3em;
+  height: 3em;
+}
+
+body nav .nav-left .logo-texts .hotel-name {
+  font-size: x-large;
+}
+
+body nav .nav-left .logo-texts .hotel-motto {
+  font-size: small;
+}
+
+body nav .nav-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body nav .nav-right #nav-new-reserv {
+  cursor: pointer;
+  border: 1px solid #000;
+}
+
+body nav .nav-right #nav-new-reserv:hover {
+  background-color: #A1A1A1;
+}
+
+body nav .nav-right #nav-new-reserv:focus {
+  border: 1px solid #A1A1A1;
+}
+
+body nav .nav-right .new-reservation {
+  padding: 0.4em;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    width: 100%;
+  }
+}
+
+body #container .tab-hider {
+  display: none !important;
+}
+
+body #container .go-back-tab,
+body #container .save-continue {
+  margin-bottom: 4em;
+}
+
+body #container .reserv-steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 5em 10em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #container .reserv-steps .reserv-step-circle-1,
+body #container .reserv-steps .reserv-step-circle-2,
+body #container .reserv-steps .reserv-step-circle-3 {
+  border-radius: 50%;
+  height: 140px;
+  width: 140px;
+  border: 2px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #container .reserv-steps .reserv-step-circle-1 svg,
+body #container .reserv-steps .reserv-step-circle-2 svg,
+body #container .reserv-steps .reserv-step-circle-3 svg {
+  width: 4em;
+  height: 4em;
+}
+
+body #container .reserv-steps .unreached-step {
+  border-color: #DBDBDB;
+}
+
+body #container .reserv-steps .unreached-step path {
+  fill: #A1A1A1;
+}
+
+body #container .reserv-steps .unreached-step polygon {
+  fill: #A1A1A1;
+}
+
+body #container .reserv-steps .unreached-step rect {
+  fill: #A1A1A1;
+}
+
+@media screen and (max-width: 480px) {
+  body #container .reserv-steps {
+    margin: 2em 0;
+    gap: 1em;
+  }
+  body #container .reserv-steps .reserv-step-circle-1,
+  body #container .reserv-steps .reserv-step-circle-2,
+  body #container .reserv-steps .reserv-step-circle-3 {
+    height: 100px;
+    width: 100px;
+  }
+  body #container .reserv-steps .reserv-step-circle-1 svg,
+  body #container .reserv-steps .reserv-step-circle-2 svg,
+  body #container .reserv-steps .reserv-step-circle-3 svg {
+    width: 3em;
+    height: 3em;
+  }
+}
+
+body #container .reservation-tabbers {
+  margin: 5em 20em;
+}
+
+body #container .reservation-tabbers .sum-price .sum-price-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: .5em;
+}
+
+body #container .reservation-tabbers .sum-price .sum-price-details .price-title-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body #container .reservation-tabbers .sum-price .sum-price-details .sum-price-title {
+  font-weight: bold;
+}
+
+body #container .reservation-tabbers .sum-price .last-price {
+  margin-top: 2em;
+}
+
+body #container .reservation-tabbers .sum-price .last-price h5 {
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+body #container .reservation-tabbers .sum-price .last-price h1 {
+  font-weight: bold;
+  text-align: center;
+  font-size: 35px;
+}
+
+body #container .reservation-tabbers .save-continue {
+  padding: 1em;
+  border: none;
+  background-color: #073763;
+  color: #fff;
+  -webkit-clip-path: polygon(80% 0, 100% 50%, 80% 100%, 0 100%, 0 0);
+          clip-path: polygon(80% 0, 100% 50%, 80% 100%, 0 100%, 0 0);
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  float: right;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+}
+
+body #container .reservation-tabbers .save-continue:hover {
+  background-color: #031729;
+  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+}
+
+body #container .reservation-tabbers .save-continue:focus {
+  opacity: 0.8;
+}
+
+body #container .reservation-tabbers .go-back-tab {
+  padding: 1em;
+  border: none;
+  background-color: #073763;
+  color: #fff;
+  -webkit-clip-path: polygon(20% 0, 100% 0, 100% 100%, 20% 100%, 0 50%);
+          clip-path: polygon(20% 0, 100% 0, 100% 100%, 20% 100%, 0 50%);
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  float: left;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+}
+
+body #container .reservation-tabbers .go-back-tab:hover {
+  background-color: #031729;
+  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+}
+
+body #container .reservation-tabbers .go-back-tab:focus {
+  opacity: 0.8;
+}
+
+body #container .reservation-tabbers .hotel-and-date-tab #hotel-select {
+  font-size: 15px;
+  font-weight: bold;
+  width: 100%;
+  padding: .5em;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 2px solid #073763;
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat 99%;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+body #container .reservation-tabbers .hotel-and-date-tab #hotel-select option {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+body #container .reservation-tabbers .hotel-and-date-tab #hotel-select .choose {
+  color: #A1A1A1;
+}
+
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons {
+  margin: 3em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .vertical-line {
+  height: 100px;
+  width: 2px;
+  background-color: #A1A1A1;
+}
+
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .date-picker-holder,
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .adult-number-holder,
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .child-number-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .date-picker-holder .adult-number,
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .date-picker-holder .child-number,
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .adult-number-holder .adult-number,
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .adult-number-holder .child-number,
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .child-number-holder .adult-number,
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .child-number-holder .child-number {
+  text-align: center;
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .date-picker-holder .adult-number:focus,
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .date-picker-holder .child-number:focus,
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .adult-number-holder .adult-number:focus,
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .adult-number-holder .child-number:focus,
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .child-number-holder .adult-number:focus,
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .child-number-holder .child-number:focus {
+  outline: #073763;
+}
+
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .date-picker-holder .adult-counter,
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .date-picker-holder .child-counter,
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .adult-number-holder .adult-counter,
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .adult-number-holder .child-counter,
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .child-number-holder .adult-counter,
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .child-number-holder .child-counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .date-picker-holder .adult-counter .counter-buttons img,
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .date-picker-holder .child-counter .counter-buttons img,
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .adult-number-holder .adult-counter .counter-buttons img,
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .adult-number-holder .child-counter .counter-buttons img,
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .child-number-holder .adult-counter .counter-buttons img,
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .child-number-holder .child-counter .counter-buttons img {
+  cursor: pointer;
+  height: 17px;
+  width: 17px;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .date-picker-holder .adult-counter .counter-buttons img:hover,
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .date-picker-holder .child-counter .counter-buttons img:hover,
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .adult-number-holder .adult-counter .counter-buttons img:hover,
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .adult-number-holder .child-counter .counter-buttons img:hover,
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .child-number-holder .adult-counter .counter-buttons img:hover,
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .child-number-holder .child-counter .counter-buttons img:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  border: 1px solid #073763;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons input {
+  padding: .5em;
+  font-size: 15px;
+  border: 2px solid #073763;
+}
+
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .date-picker-range {
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .date-picker-range:focus {
+  border-color: pink;
+}
+
+@media screen and (max-width: 480px) {
+  body #container .reservation-tabbers .hotel-and-date-tab .dates-persons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .date-picker-holder {
+    margin-bottom: 1em;
+  }
+  body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .vertical-line {
+    height: 2px;
+    width: 100%;
+    margin: 1em 0;
+  }
+  body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .vertical-line:first-child {
+    display: none;
+  }
+  body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .adult-number-holder .adult-counter,
+  body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .adult-number-holder .child-counter,
+  body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .child-number-holder .adult-counter,
+  body #container .reservation-tabbers .hotel-and-date-tab .dates-persons .child-number-holder .child-counter {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 1em;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+body #container .reservation-tabbers .room-view-tab .room-view-type-little-header {
+  font-weight: bold;
+  margin-bottom: .5em;
+}
+
+body #container .reservation-tabbers .room-view-tab .room-view-type-header {
+  margin: 0 0 1em 0.5em;
+}
+
+body #container .reservation-tabbers .room-view-tab .choosen-hotel-date {
+  margin-bottom: 5em;
+}
+
+body #container .reservation-tabbers .room-view-tab .choosen-hotel-date .choosen-hotel {
+  margin: 0 0 1em 3.3em;
+}
+
+body #container .reservation-tabbers .room-view-tab .choosen-hotel-date .choosen-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2em;
+  position: relative;
+}
+
+body #container .reservation-tabbers .room-view-tab .choosen-hotel-date .choosen-holder div::after {
+  content: '';
+  height: 50px;
+  width: 2px;
+  background-color: #073763;
+  float: right;
+}
+
+body #container .reservation-tabbers .room-view-tab .choosen-hotel-date .choosen-holder div:first-child::after {
+  background-color: transparent;
+}
+
+body #container .reservation-tabbers .room-view-tab .choosen-hotel-date .choosen-holder .enter-exit-date,
+body #container .reservation-tabbers .room-view-tab .choosen-hotel-date .choosen-holder .adult-persons,
+body #container .reservation-tabbers .room-view-tab .choosen-hotel-date .choosen-holder .child-person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body #container .reservation-tabbers .room-view-tab .choosen-hotel-date .choosen-holder .choosen-little-header {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+body #container .reservation-tabbers .room-view-tab .choosen-hotel-date .choosen-holder p {
+  margin-left: 4em;
+  text-align: center;
+}
+
+body #container .reservation-tabbers .room-view-tab .room-type {
+  width: 100%;
+}
+
+body #container .reservation-tabbers .room-view-tab .room-type .room-view-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body #container .reservation-tabbers .room-view-tab .room-type .room-view-form input[type="radio"] {
+  display: none;
+}
+
+body #container .reservation-tabbers .room-view-tab .room-type .room-view-form label {
+  display: inline-block;
+  background-color: #fff;
+  padding: 4px 11px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+body #container .reservation-tabbers .room-view-tab .room-type .room-view-form input[type="radio"]:checked + label {
+  border: 2px solid green;
+}
+
+body #container .reservation-tabbers .room-view-tab .room-type .standard-holder,
+body #container .reservation-tabbers .room-view-tab .room-type .deluxe-holder,
+body #container .reservation-tabbers .room-view-tab .room-type .suite-holder {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 300px;
+  width: 150px;
+}
+
+body #container .reservation-tabbers .room-view-tab .room-type .standard-holder img,
+body #container .reservation-tabbers .room-view-tab .room-type .deluxe-holder img,
+body #container .reservation-tabbers .room-view-tab .room-type .suite-holder img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+body #container .reservation-tabbers .room-view-tab .view-type {
+  margin: 3em 0;
+  width: 100%;
+}
+
+body #container .reservation-tabbers .room-view-tab .view-type .room-view-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body #container .reservation-tabbers .room-view-tab .view-type .room-view-form input[type="radio"] {
+  display: none;
+}
+
+body #container .reservation-tabbers .room-view-tab .view-type .room-view-form label {
+  display: inline-block;
+  background-color: #fff;
+  padding: 4px 11px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+body #container .reservation-tabbers .room-view-tab .view-type .room-view-form input[type="radio"]:checked + label {
+  border: 2px solid #37903f;
+}
+
+body #container .reservation-tabbers .room-view-tab .view-type .land-holder,
+body #container .reservation-tabbers .room-view-tab .view-type .pool-holder,
+body #container .reservation-tabbers .room-view-tab .view-type .sea-holder {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 300px;
+  width: 150px;
+}
+
+body #container .reservation-tabbers .room-view-tab .view-type .land-holder img,
+body #container .reservation-tabbers .room-view-tab .view-type .pool-holder img,
+body #container .reservation-tabbers .room-view-tab .view-type .sea-holder img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+body #container .reservation-tabbers .room-view-tab .room-view-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1em;
+}
+
+body #container .reservation-tabbers .room-view-tab .room-view-details p {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+body #container .reservation-tabbers .room-view-tab .room-view-details .price,
+body #container .reservation-tabbers .room-view-tab .room-view-details .effect-percent {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 480px) {
+  body #container .reservation-tabbers .room-view-type-header {
+    margin: 0 0 1em 0;
+  }
+  body #container .reservation-tabbers .room-view-tab .choosen-hotel-date {
+    margin-bottom: 3em;
+  }
+  body #container .reservation-tabbers .room-view-tab .choosen-hotel-date .choosen-hotel {
+    margin: 0;
+  }
+  body #container .reservation-tabbers .room-view-tab .choosen-hotel-date .choosen-holder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body #container .reservation-tabbers .room-view-tab .choosen-hotel-date .choosen-holder .enter-exit-date,
+  body #container .reservation-tabbers .room-view-tab .choosen-hotel-date .choosen-holder .adult-persons,
+  body #container .reservation-tabbers .room-view-tab .choosen-hotel-date .choosen-holder .child-person {
+    margin-left: 0;
+  }
+  body #container .reservation-tabbers .room-view-tab .choosen-hotel-date .choosen-holder div::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #073763;
+    float: right;
+    margin-bottom: 1em;
+  }
+  body #container .reservation-tabbers .room-view-tab .choosen-hotel-date .choosen-holder div:first-child::after {
+    background-color: #073763;
+  }
+  body #container .reservation-tabbers .room-view-tab .choosen-hotel-date .choosen-holder p {
+    margin-left: 0;
+  }
+  body #container .reservation-tabbers .room-view-tab .room-type .room-view-form .standard-holder,
+  body #container .reservation-tabbers .room-view-tab .room-type .room-view-form .deluxe-holder,
+  body #container .reservation-tabbers .room-view-tab .room-type .room-view-form .suite-holder {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+body #container .reservation-tabbers .payment-tab #payment-tab-go-back-btn,
+body #container .reservation-tabbers .payment-tab #payment-tab-save-btn {
+  margin: 4em 0;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4em;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing {
+  -webkit-box-flex: 60%;
+      -ms-flex: 60%;
+          flex: 60%;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing .credit-card {
+  margin-bottom: 1em;
+  padding: 1.5em;
+  width: 600px;
+  font-family: 'Gemunu Libre', sans-serif;
+  border: 1px solid #A1A1A1;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing .credit-card .card-first-floor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing .credit-card .card-first-floor .card-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing .credit-card .card-first-floor .card-name p {
+  font-size: 30px;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing .credit-card .card-first-floor .card-name p:first-child {
+  font-weight: bolder;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing .credit-card .card-first-floor .card-name p:last-child {
+  font-weight: normal;
+  font-style: italic;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing .credit-card .card-first-floor .bank-name {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing .credit-card .card-second-floor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1em 0;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing .credit-card .card-second-floor .card-arrow {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid #000;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing .credit-card .card-second-floor img {
+  margin-left: .5em;
+  height: 50px;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing .credit-card .card-second-floor .cvv {
+  margin-left: 75%;
+  font-weight: bolder;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing .credit-card .card-third-floor .card-number {
+  font-size: 30px;
+  width: 100%;
+  text-align: center;
+  font-stretch: ultra-expanded;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing .credit-card .card-fourth-floor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing .credit-card .card-fourth-floor .card-bottom-left .costumer-name {
+  font-size: 18px;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing .credit-card .card-fourth-floor .card-bottom-left .card-last-date {
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing .credit-card .card-fourth-floor .card-bottom-right img {
+  height: 80px;
+  width: 100px;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing fieldset {
+  padding: 4em 1em 2em 1em;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing fieldset legend {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing fieldset .card-form-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing fieldset .card-form-holder #card-name {
+  margin-bottom: 2em;
+  padding: 2px;
+  border: 2px solid #073763;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing fieldset .card-form-holder #card-number {
+  padding: 2px;
+  margin-bottom: 2em;
+  border: 2px solid #073763;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing fieldset .card-form-holder .card-date-cvv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing fieldset .card-form-holder .card-date-cvv .card-dater-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing fieldset .card-form-holder .card-date-cvv .card-dater-holder .card-dater {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing fieldset .card-form-holder .card-date-cvv .card-dater-holder .card-dater #card-month {
+  font-size: 15px;
+  width: 100%;
+  padding: 2px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 2px solid #073763;
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat 99%;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing fieldset .card-form-holder .card-date-cvv .card-dater-holder .card-dater #card-month option {
+  font-size: 15px;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing fieldset .card-form-holder .card-date-cvv .card-dater-holder .card-dater #card-year {
+  font-size: 15px;
+  width: 100%;
+  padding: 2px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 2px solid #073763;
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat 99%;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing fieldset .card-form-holder .card-date-cvv .card-dater-holder .card-dater #card-year option {
+  font-size: 15px;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing fieldset .card-form-holder .card-date-cvv .cvv-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 1em;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing fieldset .card-form-holder .card-date-cvv .cvv-holder #cvv {
+  width: 3em;
+  padding: 2px;
+  border: 2px solid #073763;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-right-wing {
+  -webkit-box-flex: 40%;
+      -ms-flex: 40%;
+          flex: 40%;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-right-wing .selected-hotel {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-right-wing .selected-details {
+  margin-bottom: 1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+  border-bottom: 1px solid #073763;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-right-wing .selected-details .holiday-detail-title {
+  font-weight: bold;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-right-wing .cupon-code {
+  margin-top: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1em;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-right-wing .cupon-code #cupon-code-input {
+  -webkit-box-flex: 70%;
+      -ms-flex: 70%;
+          flex: 70%;
+  width: 100%;
+  margin-bottom: 2em;
+  padding: 4px;
+  border: 2px solid #073763;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-right-wing .cupon-code .cupon-btn {
+  cursor: pointer;
+  -webkit-box-flex: 20%;
+      -ms-flex: 20%;
+          flex: 20%;
+  width: 100%;
+  margin-bottom: 2em;
+  padding: 4px;
+  border: 2px solid #073763;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  background-color: #073763;
+  color: #fff;
+  transition: ease-in-out .2s;
+  -webkit-transition: ease-in-out .2s;
+  -moz-transition: ease-in-out .2s;
+  -ms-transition: ease-in-out .2s;
+  -o-transition: ease-in-out .2s;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-right-wing .cupon-code .cupon-btn:hover {
+  background-color: #031729;
+}
+
+body #container .reservation-tabbers .payment-tab .payment-container .payment-right-wing .cupon-code .cupon-btn:focus {
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+
+@media screen and (max-width: 480px) {
+  body #container .reservation-tabbers .payment-tab .payment-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body #container .reservation-tabbers .payment-tab .payment-container .payment-left-wing .credit-card {
+    width: 100% !important;
+  }
+}
+
+body #container .reservation-tabbers .reservation-finished-tab {
+  position: relative;
+}
+
+body #container .reservation-tabbers .reservation-finished-tab .delete-reserv-popup,
+body #container .reservation-tabbers .reservation-finished-tab .deleted-confirm-message {
+  display: inline-block;
+  padding: 1em;
+  border: 1px solid #073763;
+  background-color: #DBDBDB;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  position: absolute;
+  left: 30%;
+  top: 15%;
+}
+
+body #container .reservation-tabbers .reservation-finished-tab .delete-reserv-popup img,
+body #container .reservation-tabbers .reservation-finished-tab .deleted-confirm-message img {
+  height: 100px;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body #container .reservation-tabbers .reservation-finished-tab .delete-reserv-popup p,
+body #container .reservation-tabbers .reservation-finished-tab .deleted-confirm-message p {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+body #container .reservation-tabbers .reservation-finished-tab .delete-reserv-popup .pop-btn,
+body #container .reservation-tabbers .reservation-finished-tab .deleted-confirm-message .pop-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1em;
+}
+
+body #container .reservation-tabbers .reservation-finished-tab .delete-reserv-popup .pop-btn button,
+body #container .reservation-tabbers .reservation-finished-tab .deleted-confirm-message .pop-btn button {
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid #073763;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+}
+
+body #container .reservation-tabbers .reservation-finished-tab .delete-reserv-popup .pop-btn button:hover,
+body #container .reservation-tabbers .reservation-finished-tab .deleted-confirm-message .pop-btn button:hover {
+  background-color: #A1A1A1;
+}
+
+body #container .reservation-tabbers .reservation-finished-tab .delete-reserv-popup .pop-btn button:focus,
+body #container .reservation-tabbers .reservation-finished-tab .deleted-confirm-message .pop-btn button:focus {
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+
+body #container .reservation-tabbers .reservation-finished-tab #confirm {
+  left: 40%;
+}
+
+body #container .reservation-tabbers .reservation-finished-tab img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 150px;
+  width: 150px;
+  margin-bottom: 2em;
+}
+
+body #container .reservation-tabbers .reservation-finished-tab .final-message-wrapper {
+  width: 500px;
+  display: block;
+  margin: 2em auto;
+}
+
+body #container .reservation-tabbers .reservation-finished-tab .final-message-wrapper .final-message {
+  text-align: center;
+  margin-right: 0;
+}
+
+body #container .reservation-tabbers .reservation-finished-tab .final-message-wrapper .final-message-title {
+  text-align: center;
+}
+
+body #container .reservation-tabbers .reservation-finished-tab .final-reserv-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1em;
+}
+
+body #container .reservation-tabbers .reservation-finished-tab .final-reserv-btn button {
+  padding: 1em;
+  border: none;
+  background-color: #073763;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  float: left;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+}
+
+body #container .reservation-tabbers .reservation-finished-tab .final-reserv-btn button:hover {
+  background-color: #031729;
+  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+}
+
+body #container .reservation-tabbers .reservation-finished-tab .final-reserv-btn button:focus {
+  opacity: 0.8;
+}
+
+body #container .reservation-tabbers .reservation-finished-tab .reservation-all-details {
+  margin: 3em 0;
+}
+
+body #container .reservation-tabbers .reservation-finished-tab .reservation-all-details .reserv-hotel {
+  text-align: center;
+}
+
+body #container .reservation-tabbers .reservation-finished-tab .reservation-all-details .reserv-detail-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  gap: 2em;
+  margin-top: 4em;
+}
+
+body #container .reservation-tabbers .reservation-finished-tab .reservation-all-details .reserv-hotel-detail {
+  text-align: center;
+}
+
+body #container .reservation-tabbers .reservation-finished-tab .reservation-all-details .reserv-hotel-detail .reserv-title {
+  font-weight: bold;
+}
+
+body #container .reservation-tabbers .reservation-finished-tab .reservation-all-details .reservation-all-details {
+  margin-top: 5em;
+}
+
+body #container .reservation-tabbers .reservation-finished-tab .reservation-all-details #final-price {
+  margin-top: 5em;
+}
+
+body #container .reservation-tabbers .reservation-finished-tab .reservation-all-details #final-price #final-price-line {
+  padding-top: 1.5em;
+  border-top: #A1A1A1 1px solid;
+}
+
+@media screen and (max-width: 480px) {
+  body #container .reservation-tabbers .reservation-finished-tab .delete-reserv-popup,
+  body #container .reservation-tabbers .reservation-finished-tab .deleted-confirm-message {
+    left: 0;
+  }
+  body #container .reservation-tabbers .reservation-finished-tab #confirm {
+    left: 12%;
+  }
+  body #container .reservation-tabbers .reservation-finished-tab .final-message-wrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body #container .reservation-tabbers {
+    margin: 2em;
+  }
+}
+/*# sourceMappingURL=customscss.css.map */

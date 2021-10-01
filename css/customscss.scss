@@ -1,0 +1,954 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+$primary-color-blue:#073763;
+$primary-color-dark-blue:#031729;
+$black:#000;
+$white:#fff;
+$unfinished-border:#DBDBDB;
+$unfinished-icon:#A1A1A1;
+$green:#37903f;
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@mixin phone-bp {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em 2em;
+        background-color: $primary-color-blue;
+        .nav-left {
+            color: $white;
+            display: flex;
+            gap: 1em;
+            align-items: center;
+            .logo {
+                width: 3em;
+                height: 3em;
+            }
+            .logo-texts {
+                .hotel-name {
+                    font-size: x-large;
+                }
+                .hotel-motto {
+                    font-size: small;
+                }
+            }
+        }
+        .nav-right {
+            display: flex;
+            align-items: center;
+            #nav-new-reserv {
+                cursor: pointer;
+                border: 1px solid $black;
+                &:hover {
+                    background-color: $unfinished-icon;
+                }
+                &:focus {
+                    border: 1px solid $unfinished-icon;
+                }
+            }
+            .new-reservation {
+                padding: 0.4em;
+                font-size: 14px;
+            }
+        }
+    }
+    @include phone-bp {
+        width: 100%;
+    }
+    #container {
+        .tab-hider {
+            display: none !important;
+        }
+        .go-back-tab,
+        .save-continue {
+            margin-bottom: 4em;
+        }
+        .reserv-steps {
+            display: flex;
+            justify-content: space-around;
+            margin: 5em 10em;
+            align-items: center;
+            .reserv-step-circle-1,
+            .reserv-step-circle-2,
+            .reserv-step-circle-3 {
+                border-radius: 50%;
+                height: 140px;
+                width: 140px;
+                border: 2px solid $black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                svg {
+                    width: 4em;
+                    height: 4em;
+                }
+            }
+            .unreached-step {
+                border-color: $unfinished-border;
+                path {
+                    fill: $unfinished-icon;
+                }
+                polygon {
+                    fill: $unfinished-icon;
+                }
+                rect {
+                    fill: $unfinished-icon;
+                }
+            }
+        }
+        @include phone-bp {
+            .reserv-steps {
+                margin: 2em 0;
+                gap: 1em;
+                .reserv-step-circle-1,
+                .reserv-step-circle-2,
+                .reserv-step-circle-3 {
+                    height: 100px;
+                    width: 100px;
+                    svg {
+                        width: 3em;
+                        height: 3em;
+                    }
+                }
+            }
+        }
+        .reservation-tabbers {
+            margin: 5em 20em;
+            .sum-price {
+                .sum-price-details {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: .5em;
+                    .price-title-holder {
+                        display: flex;
+                    }
+                    .sum-price-title {
+                        font-weight: bold;
+                    }
+                }
+                .last-price {
+                    margin-top: 2em;
+                    h5 {
+                        text-align: center;
+                        font-size: 15px;
+                        font-weight: bold;
+                    }
+                    h1 {
+                        font-weight: bold;
+                        text-align: center;
+                        font-size: 35px;
+                    }
+                }
+            }
+            .save-continue {
+                padding: 1em;
+                border: none;
+                background-color: $primary-color-blue;
+                color: $white;
+                clip-path: polygon(80% 0, 100% 50%, 80% 100%, 0 100%, 0 0);
+                font-size: 15px;
+                font-weight: bold;
+                border-radius: 4px;
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                -ms-border-radius: 4px;
+                -o-border-radius: 4px;
+                float: right;
+                cursor: pointer;
+                transition: all .2s ease-in-out;
+                -webkit-transition: all .2s ease-in-out;
+                -moz-transition: all .2s ease-in-out;
+                -ms-transition: all .2s ease-in-out;
+                -o-transition: all .2s ease-in-out;
+                &:hover {
+                    background-color: $primary-color-dark-blue;
+                    transform: scale(0.95);
+                    -webkit-transform: scale(0.95);
+                    -moz-transform: scale(0.95);
+                    -ms-transform: scale(0.95);
+                    -o-transform: scale(0.95);
+                }
+                &:focus {
+                    opacity: 0.8;
+                }
+            }
+            .go-back-tab {
+                padding: 1em;
+                border: none;
+                background-color: $primary-color-blue;
+                color: $white;
+                clip-path: polygon(20% 0, 100% 0, 100% 100%, 20% 100%, 0 50%);
+                font-size: 15px;
+                font-weight: bold;
+                border-radius: 4px;
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                -ms-border-radius: 4px;
+                -o-border-radius: 4px;
+                float: left;
+                cursor: pointer;
+                transition: all .2s ease-in-out;
+                -webkit-transition: all .2s ease-in-out;
+                -moz-transition: all .2s ease-in-out;
+                -ms-transition: all .2s ease-in-out;
+                -o-transition: all .2s ease-in-out;
+                &:hover {
+                    background-color: $primary-color-dark-blue;
+                    transform: scale(0.95);
+                    -webkit-transform: scale(0.95);
+                    -moz-transform: scale(0.95);
+                    -ms-transform: scale(0.95);
+                    -o-transform: scale(0.95);
+                }
+                &:focus {
+                    opacity: 0.8;
+                }
+            }
+            .hotel-and-date-tab {
+                #hotel-select {
+                    font-size: 15px;
+                    font-weight: bold;
+                    width: 100%;
+                    padding: .5em;
+                    appearance: none;
+                    border: 2px solid $primary-color-blue;
+                    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat 99%;
+                    border-radius: 4px;
+                    -webkit-border-radius: 4px;
+                    -moz-border-radius: 4px;
+                    -ms-border-radius: 4px;
+                    -o-border-radius: 4px;
+                    option {
+                        font-size: 15px;
+                        font-weight: bold;
+                    }
+                    .choose {
+                        color: $unfinished-icon;
+                    }
+                }
+                .dates-persons {
+                    margin: 3em 0;
+                    display: flex;
+                    justify-content: space-around;
+                    .vertical-line {
+                        height: 100px;
+                        width: 2px;
+                        background-color: $unfinished-icon;
+                    }
+                    .date-picker-holder,
+                    .adult-number-holder,
+                    .child-number-holder {
+                        display: flex;
+                        flex-direction: column;
+                        .adult-number,
+                        .child-number {
+                            text-align: center;
+                            height: 36px;
+                            width: 36px;
+                            border-radius: 50%;
+                            -webkit-border-radius: 50%;
+                            -moz-border-radius: 50%;
+                            -ms-border-radius: 50%;
+                            -o-border-radius: 50%;
+                            &:focus {
+                                outline: $primary-color-blue;
+                            }
+                        }
+                        .adult-counter,
+                        .child-counter {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-around;
+                            .counter-buttons {
+                                img {
+                                    cursor: pointer;
+                                    height: 17px;
+                                    width: 17px;
+                                    transition: all .2s ease-in-out;
+                                    -webkit-transition: all .2s ease-in-out;
+                                    -moz-transition: all .2s ease-in-out;
+                                    -ms-transition: all .2s ease-in-out;
+                                    -o-transition: all .2s ease-in-out;
+                                    border-radius: 50%;
+                                    -webkit-border-radius: 50%;
+                                    -moz-border-radius: 50%;
+                                    -ms-border-radius: 50%;
+                                    -o-border-radius: 50%;
+                                    &:hover {
+                                        transform: scale(1.1);
+                                        -webkit-transform: scale(1.1);
+                                        -moz-transform: scale(1.1);
+                                        -ms-transform: scale(1.1);
+                                        -o-transform: scale(1.1);
+                                        border: 1px solid $primary-color-blue;
+                                        border-radius: 50%;
+                                        -webkit-border-radius: 50%;
+                                        -moz-border-radius: 50%;
+                                        -ms-border-radius: 50%;
+                                        -o-border-radius: 50%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    input {
+                        padding: .5em;
+                        font-size: 15px;
+                        border: 2px solid $primary-color-blue;
+                    }
+                    .date-picker-range {
+                        border-radius: 4px;
+                        -webkit-border-radius: 4px;
+                        -moz-border-radius: 4px;
+                        -ms-border-radius: 4px;
+                        -o-border-radius: 4px;
+                        &:focus {
+                            border-color: pink;
+                        }
+                    }
+                }
+                @include phone-bp {
+                    .dates-persons {
+                        flex-direction: column;
+                        .date-picker-holder {
+                            margin-bottom: 1em;
+                        }
+                        .vertical-line {
+                            height: 2px;
+                            width: 100%;
+                            margin: 1em 0;
+                            &:first-child {
+                                display: none;
+                            }
+                        }
+                        .adult-number-holder,
+                        .child-number-holder {
+                            .adult-counter,
+                            .child-counter {
+                                justify-content: center;
+                                gap: 1em;
+                                align-items: center;
+                            }
+                        }
+                    }
+                }
+            }
+            .room-view-tab {
+                .room-view-type-little-header {
+                    font-weight: bold;
+                    margin-bottom: .5em;
+                }
+                .room-view-type-header {
+                    margin: 0 0 1em 0.5em;
+                }
+                .choosen-hotel-date {
+                    margin-bottom: 5em;
+                    .choosen-hotel {
+                        margin: 0 0 1em 3.3em;
+                    }
+                    .choosen-holder {
+                        display: flex;
+                        gap: 2em;
+                        position: relative;
+                        div::after {
+                            content: '';
+                            height: 50px;
+                            width: 2px;
+                            background-color: $primary-color-blue;
+                            float: right;
+                        }
+                        div:first-child::after {
+                            background-color: transparent;
+                        }
+                        .enter-exit-date,
+                        .adult-persons,
+                        .child-person {
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        .choosen-little-header {
+                            text-decoration: underline;
+                            font-weight: bold;
+                        }
+                        p {
+                            margin-left: 4em;
+                            text-align: center;
+                        }
+                    }
+                }
+                .room-type {
+                    width: 100%;
+                    .room-view-form {
+                        display: flex;
+                        justify-content: space-around;
+                    }
+                    .room-view-form input[type="radio"] {
+                        display: none;
+                    }
+                    .room-view-form label {
+                        display: inline-block;
+                        background-color: $white;
+                        padding: 4px 11px;
+                        border-radius: 6px;
+                        font-size: 16px;
+                        cursor: pointer;
+                        -webkit-border-radius: 6px;
+                        -moz-border-radius: 6px;
+                        -ms-border-radius: 6px;
+                        -o-border-radius: 6px;
+                    }
+                    .room-view-form input[type="radio"]:checked+label {
+                        border: 2px solid green;
+                    }
+                    .standard-holder,
+                    .deluxe-holder,
+                    .suite-holder {
+                        flex: 1;
+                        height: 300px;
+                        width: 150px;
+                        img {
+                            max-width: 100%;
+                            max-height: 100%;
+                        }
+                    }
+                }
+                .view-type {
+                    margin: 3em 0;
+                    width: 100%;
+                    .room-view-form {
+                        display: flex;
+                        justify-content: space-around;
+                    }
+                    .room-view-form input[type="radio"] {
+                        display: none;
+                    }
+                    .room-view-form label {
+                        display: inline-block;
+                        background-color: $white;
+                        padding: 4px 11px;
+                        border-radius: 6px;
+                        font-size: 16px;
+                        cursor: pointer;
+                        -webkit-border-radius: 6px;
+                        -moz-border-radius: 6px;
+                        -ms-border-radius: 6px;
+                        -o-border-radius: 6px;
+                    }
+                    .room-view-form input[type="radio"]:checked+label {
+                        border: 2px solid $green;
+                    }
+                    .land-holder,
+                    .pool-holder,
+                    .sea-holder {
+                        flex: 1;
+                        height: 300px;
+                        width: 150px;
+                        img {
+                            max-width: 100%;
+                            max-height: 100%;
+                        }
+                    }
+                }
+                .room-view-details {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 1em;
+                    p {
+                        font-size: 13px;
+                        font-weight: bold;
+                    }
+                    .price,
+                    .effect-percent {
+                        font-weight: bold;
+                        font-size: 17px;
+                    }
+                }
+            }
+            @include phone-bp {
+                .room-view-type-header {
+                    margin: 0 0 1em 0;
+                }
+                .room-view-tab {
+                    .choosen-hotel-date {
+                        margin-bottom: 3em;
+                        .choosen-hotel {
+                            margin: 0;
+                        }
+                        .choosen-holder {
+                            flex-direction: column;
+                            .enter-exit-date,
+                            .adult-persons,
+                            .child-person {
+                                margin-left: 0;
+                            }
+                            div::after {
+                                content: '';
+                                display: block;
+                                height: 2px;
+                                width: 100%;
+                                background-color: $primary-color-blue;
+                                float: right;
+                                margin-bottom: 1em;
+                            }
+                            div:first-child::after {
+                                background-color: $primary-color-blue;
+                            }
+                            p {
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                    .room-type {
+                        .room-view-form {
+                            .standard-holder,
+                            .deluxe-holder,
+                            .suite-holder {
+                                width: 100%;
+                                height: 200px;
+                            }
+                        }
+                    }
+                }
+            }
+            .payment-tab {
+                #payment-tab-go-back-btn,
+                #payment-tab-save-btn {
+                    margin: 4em 0;
+                }
+                .payment-container {
+                    display: flex;
+                    gap: 4em;
+                    .payment-left-wing {
+                        flex: 60%;
+                        .credit-card {
+                            margin-bottom: 1em;
+                            padding: 1.5em;
+                            width: 600px;
+                            font-family: 'Gemunu Libre', sans-serif;
+                            border: 1px solid $unfinished-icon;
+                            border-radius: 15px;
+                            -webkit-border-radius: 15px;
+                            -moz-border-radius: 15px;
+                            -ms-border-radius: 15px;
+                            -o-border-radius: 15px;
+                            .card-first-floor {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                .card-name {
+                                    display: flex;
+                                    p {
+                                        font-size: 30px;
+                                        &:first-child {
+                                            font-weight: bolder;
+                                        }
+                                        &:last-child {
+                                            font-weight: normal;
+                                            font-style: italic;
+                                        }
+                                    }
+                                }
+                                .bank-name {
+                                    font-size: 30px;
+                                    font-weight: bolder;
+                                }
+                            }
+                            .card-second-floor {
+                                display: flex;
+                                align-items: center;
+                                margin: 1em 0;
+                                .card-arrow {
+                                    width: 0;
+                                    height: 0;
+                                    border-top: 8px solid transparent;
+                                    border-bottom: 8px solid transparent;
+                                    border-right: 8px solid $black;
+                                }
+                                img {
+                                    margin-left: .5em;
+                                    height: 50px;
+                                }
+                                .cvv {
+                                    margin-left: 75%;
+                                    font-weight: bolder;
+                                }
+                            }
+                            .card-third-floor {
+                                .card-number {
+                                    font-size: 30px;
+                                    width: 100%;
+                                    text-align: center;
+                                    font-stretch: ultra-expanded;
+                                }
+                            }
+                            .card-fourth-floor {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                .card-bottom-left {
+                                    .costumer-name {
+                                        font-size: 18px;
+                                    }
+                                    .card-last-date {
+                                        font-weight: bold;
+                                        display: flex;
+                                    }
+                                }
+                                .card-bottom-right {
+                                    img {
+                                        height: 80px;
+                                        width: 100px;
+                                    }
+                                }
+                            }
+                        }
+                        fieldset {
+                            padding: 4em 1em 2em 1em;
+                            legend {
+                                font-weight: bold;
+                                font-size: 18px;
+                            }
+                            .card-form-holder {
+                                display: flex;
+                                flex-direction: column;
+                                #card-name {
+                                    margin-bottom: 2em;
+                                    padding: 2px;
+                                    border: 2px solid $primary-color-blue;
+                                    border-radius: 4px;
+                                    -webkit-border-radius: 4px;
+                                    -moz-border-radius: 4px;
+                                    -ms-border-radius: 4px;
+                                    -o-border-radius: 4px;
+                                }
+                                #card-number {
+                                    padding: 2px;
+                                    margin-bottom: 2em;
+                                    border: 2px solid $primary-color-blue;
+                                    border-radius: 4px;
+                                    -webkit-border-radius: 4px;
+                                    -moz-border-radius: 4px;
+                                    -ms-border-radius: 4px;
+                                    -o-border-radius: 4px;
+                                }
+                                .card-date-cvv {
+                                    display: flex;
+                                    .card-dater-holder {
+                                        display: flex;
+                                        flex-direction: column;
+                                        .card-dater {
+                                            display: flex;
+                                            gap: 1em;
+                                            #card-month {
+                                                font-size: 15px;
+                                                width: 100%;
+                                                padding: 2px;
+                                                appearance: none;
+                                                border: 2px solid $primary-color-blue;
+                                                background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat 99%;
+                                                border-radius: 4px;
+                                                -webkit-border-radius: 4px;
+                                                -moz-border-radius: 4px;
+                                                -ms-border-radius: 4px;
+                                                -o-border-radius: 4px;
+                                                option {
+                                                    font-size: 15px;
+                                                }
+                                            }
+                                            #card-year {
+                                                font-size: 15px;
+                                                width: 100%;
+                                                padding: 2px;
+                                                appearance: none;
+                                                border: 2px solid $primary-color-blue;
+                                                background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat 99%;
+                                                border-radius: 4px;
+                                                -webkit-border-radius: 4px;
+                                                -moz-border-radius: 4px;
+                                                -ms-border-radius: 4px;
+                                                -o-border-radius: 4px;
+                                                option {
+                                                    font-size: 15px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .cvv-holder {
+                                        display: flex;
+                                        flex-direction: column;
+                                        margin-left: 1em;
+                                        #cvv {
+                                            width: 3em;
+                                            padding: 2px;
+                                            border: 2px solid $primary-color-blue;
+                                            border-radius: 4px;
+                                            -webkit-border-radius: 4px;
+                                            -moz-border-radius: 4px;
+                                            -ms-border-radius: 4px;
+                                            -o-border-radius: 4px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .payment-right-wing {
+                        flex: 40%;
+                        .selected-hotel {
+                            font-size: 30px;
+                            font-weight: bold;
+                            text-align: center;
+                            margin-bottom: 1em;
+                        }
+                        .selected-details {
+                            margin-bottom: 1em;
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                            gap: 1em;
+                            border-bottom: 1px solid $primary-color-blue;
+                            .holiday-detail-title {
+                                font-weight: bold;
+                            }
+                        }
+                        .cupon-code {
+                            margin-top: 2em;
+                            display: flex;
+                            justify-content: space-between;
+                            gap: 1em;
+                            #cupon-code-input {
+                                flex: 70%;
+                                width: 100%;
+                                margin-bottom: 2em;
+                                padding: 4px;
+                                border: 2px solid $primary-color-blue;
+                                border-radius: 4px;
+                                -webkit-border-radius: 4px;
+                                -moz-border-radius: 4px;
+                                -ms-border-radius: 4px;
+                                -o-border-radius: 4px;
+                            }
+                            .cupon-btn {
+                                cursor: pointer;
+                                flex: 20%;
+                                width: 100%;
+                                margin-bottom: 2em;
+                                padding: 4px;
+                                border: 2px solid $primary-color-blue;
+                                border-radius: 4px;
+                                -webkit-border-radius: 4px;
+                                -moz-border-radius: 4px;
+                                -ms-border-radius: 4px;
+                                -o-border-radius: 4px;
+                                background-color: $primary-color-blue;
+                                color: $white;
+                                transition: ease-in-out .2s;
+                                -webkit-transition: ease-in-out .2s;
+                                -moz-transition: ease-in-out .2s;
+                                -ms-transition: ease-in-out .2s;
+                                -o-transition: ease-in-out .2s;
+                                &:hover {
+                                    background-color: $primary-color-dark-blue;
+                                }
+                                &:focus {
+                                    transform: scale(.9);
+                                    -webkit-transform: scale(.9);
+                                    -moz-transform: scale(.9);
+                                    -ms-transform: scale(.9);
+                                    -o-transform: scale(.9);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @include phone-bp {
+                .payment-tab {
+                    .payment-container {
+                        flex-direction: column;
+                        .payment-left-wing {
+                            .credit-card {
+                                width: 100% !important;
+                            }
+                        }
+                    }
+                }
+            }
+            .reservation-finished-tab {
+                position: relative;
+                .delete-reserv-popup,
+                .deleted-confirm-message {
+                    display: inline-block;
+                    padding: 1em;
+                    border: 1px solid $primary-color-blue;
+                    background-color: $unfinished-border;
+                    border-radius: 8px;
+                    -webkit-border-radius: 8px;
+                    -moz-border-radius: 8px;
+                    -ms-border-radius: 8px;
+                    -o-border-radius: 8px;
+                    position: absolute;
+                    left: 30%;
+                    top: 15%;
+                    img {
+                        height: 100px;
+                        width: 100px;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                    p {
+                        margin-bottom: 1em;
+                        text-align: center;
+                    }
+                    .pop-btn {
+                        display: flex;
+                        justify-content: center;
+                        gap: 1em;
+                        button {
+                            padding: 5px;
+                            cursor: pointer;
+                            border: 1px solid $primary-color-blue;
+                            border-radius: 5px;
+                            -webkit-border-radius: 5px;
+                            -moz-border-radius: 5px;
+                            -ms-border-radius: 5px;
+                            -o-border-radius: 5px;
+                            transition: all .2s ease-in-out;
+                            -webkit-transition: all .2s ease-in-out;
+                            -moz-transition: all .2s ease-in-out;
+                            -ms-transition: all .2s ease-in-out;
+                            -o-transition: all .2s ease-in-out;
+                            &:hover {
+                                background-color: $unfinished-icon;
+                            }
+                            &:focus {
+                                transform: scale(.9);
+                                -webkit-transform: scale(.9);
+                                -moz-transform: scale(.9);
+                                -ms-transform: scale(.9);
+                                -o-transform: scale(.9);
+                            }
+                        }
+                    }
+                }
+                #confirm {
+                    left: 40%;
+                }
+                img {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    height: 150px;
+                    width: 150px;
+                    margin-bottom: 2em;
+                }
+                .final-message-wrapper {
+                    width: 500px;
+                    display: block;
+                    margin: 2em auto;
+                    .final-message {
+                        text-align: center;
+                        margin-right: 0;
+                    }
+                    .final-message-title {
+                        text-align: center;
+                    }
+                }
+                .final-reserv-btn {
+                    display: flex;
+                    justify-content: center;
+                    gap: 1em;
+                    button {
+                        padding: 1em;
+                        border: none;
+                        background-color: $primary-color-blue;
+                        color: $white;
+                        font-size: 15px;
+                        font-weight: bold;
+                        border-radius: 4px;
+                        -webkit-border-radius: 4px;
+                        -moz-border-radius: 4px;
+                        -ms-border-radius: 4px;
+                        -o-border-radius: 4px;
+                        float: left;
+                        cursor: pointer;
+                        transition: all .2s ease-in-out;
+                        -webkit-transition: all .2s ease-in-out;
+                        -moz-transition: all .2s ease-in-out;
+                        -ms-transition: all .2s ease-in-out;
+                        -o-transition: all .2s ease-in-out;
+                        &:hover {
+                            background-color: $primary-color-dark-blue;
+                            transform: scale(0.95);
+                            -webkit-transform: scale(0.95);
+                            -moz-transform: scale(0.95);
+                            -ms-transform: scale(0.95);
+                            -o-transform: scale(0.95);
+                        }
+                        &:focus {
+                            opacity: 0.8;
+                        }
+                    }
+                }
+                .reservation-all-details {
+                    margin: 3em 0;
+                    .reserv-hotel {
+                        text-align: center;
+                    }
+                    .reserv-detail-wrapper {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        place-items: center;
+                        gap: 2em;
+                        margin-top: 4em;
+                    }
+                    .reserv-hotel-detail {
+                        text-align: center;
+                        .reserv-title {
+                            font-weight: bold;
+                        }
+                    }
+                    .reservation-all-details {
+                        margin-top: 5em;
+                    }
+                    #final-price {
+                        margin-top: 5em;
+                        #final-price-line {
+                            padding-top: 1.5em;
+                            border-top: $unfinished-icon 1px solid;
+                        }
+                    }
+                }
+            }
+            @include phone-bp {
+                .reservation-finished-tab {
+                    .delete-reserv-popup,
+                    .deleted-confirm-message {
+                        left: 0;
+                    }
+                    #confirm {
+                        left: 12%;
+                    }
+                    .final-message-wrapper {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        @include phone-bp {
+            .reservation-tabbers {
+                margin: 2em;
+            }
+        }
+    }
+}
