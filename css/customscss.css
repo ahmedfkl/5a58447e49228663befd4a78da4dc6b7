@@ -1066,6 +1066,7 @@ body #container .reservation-tabbers .reservation-finished-tab {
 
 body #container .reservation-tabbers .reservation-finished-tab .delete-reserv-popup,
 body #container .reservation-tabbers .reservation-finished-tab .deleted-confirm-message {
+  z-index: 99999;
   display: inline-block;
   padding: 1em;
   border: 1px solid #073763;
